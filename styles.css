@@ -3,30 +3,33 @@
   src: url(/assets/fonts/MADEINFINITY.otf);
 }
 html {
-  background-color: #080908;
-  color: #080908;
-  margin: 0.5em;
   font-family: fonty;
+  color: #E6E8e6;
+  padding: 0.5em;
+  padding-bottom: 0;
+  animation: infinite forwards t 1s;
 }
 
 body {
-  background-color: #080908;
   margin: auto;
   display: block;
+  background-color: #080908;
 }
 
 section {
-  background-color: #E6E8e6;
   max-width: 75em;
   margin: auto;
   display: block;
   padding: 2.5em;
   margin: 2.5em auto;
-  box-shadow: 0.5em 0.5em #3772FF, 1em 1em #DF2935, 1.5em 1.5em #FDCA40;
 }
 
 section:first-of-type {
   margin-top: 0;
+}
+
+section:last-of-type {
+  margin-bottom: 0;
 }
 
 h1 {
@@ -43,5 +46,35 @@ h2 {
 }
 
 .flex-item {
-  flex: 1;
+  flex: var(--i);
+}
+
+.note {
+  opacity: 0.5;
+  text-align: center;
+}
+
+#intro {
+  border: 1px red dashed;
+  min-height: calc(100vh - 96px);
+  display: flex;
+  justify-content: center;
+}
+
+#intro div {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#intro h1 {
+  text-align: center;
+  text-shadow: #3772FF 1em 1em;
+  font-size: 10em;
+}
+
+.module-name {
+  font-weight: bold;
 }/*# sourceMappingURL=styles.css.map */
