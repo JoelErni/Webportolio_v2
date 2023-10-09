@@ -54,6 +54,15 @@ h2 {
   text-align: center;
 }
 
+#intro hr {
+  min-height: 0.75vw;
+  background-color: #E6E8e6;
+  border: none;
+  margin: 0;
+  max-width: 56vw;
+  margin: auto;
+}
+
 #intro {
   border: 1px red dashed;
   min-height: calc(100vh - 96px);
@@ -67,12 +76,32 @@ h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 75vw;
 }
 
 #intro h1 {
   text-align: center;
-  text-shadow: #3772FF 1em 1em;
-  font-size: 10em;
+  font-size: 15vw;
+}
+
+#intro h2 {
+  text-align: center;
+  opacity: 0.75;
+  letter-spacing: 0.45vw;
+  margin-top: 0;
+  font-size: 2.5vw;
+}
+
+.shadow-box {
+  box-shadow: 5px 5px #3772FF, 10px 10px #DF2935, 15px 15px #FDCA40;
+}
+
+.shadow-text {
+  text-shadow: 5px 5px #3772FF, 10px 10px #DF2935, 15px 15px #FDCA40;
+}
+
+#about-me img {
+  background-color: #E6E8e6;
 }
 
 .module-name {
