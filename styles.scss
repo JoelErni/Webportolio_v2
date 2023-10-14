@@ -80,26 +80,23 @@ h2{
     display: flex;
     justify-content: center;
 
-    background-image: linear-gradient(transparent 25%, $c1), url(/assets/images/background.jpg);
+    background: scroll linear-gradient(transparent 25%, $c1), url(/assets/images/background.jpg) fixed;
     background-size: cover;
-    background-position: unset;
+
+}
+
+#title_container{
+    transform-origin: center;
 }
 
 #intro div{
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    width: 75vw;
+    margin-top: 10em;
 }
 
 #intro h1{
     text-align: center;
-    font-size: 11.5vw;
+    font-size: 15vw;
     filter: drop-shadow(0 0 50px $c2);
-    text-transform: uppercase;
 }
 
 #intro h2{
