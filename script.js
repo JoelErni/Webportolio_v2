@@ -17,7 +17,11 @@ function background(){
 }
 
 function scroll() {
-    document.getElementById("title_container").style.scale = 1 - window.scrollY / 1000
+    intro_animation()
+}
+
+function intro_animation(){
+    document.getElementById("intro").style.filter = `blur(${window.scrollY/25}px)`
 }
 
 function reveal() {
