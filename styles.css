@@ -17,11 +17,14 @@ body {
 }
 
 section {
-  max-width: 75em;
   margin: auto;
   display: block;
   padding: 2.5em;
   margin: 2.5em auto;
+}
+
+section:not(section:first-of-type) {
+  width: 66.6666666667vw;
 }
 
 section:first-of-type {
@@ -59,15 +62,17 @@ h2 {
   background-color: #E6E8e6;
   border: none;
   margin: 0;
-  max-width: 56vw;
+  max-width: 58vw;
   margin: auto;
 }
 
 #intro {
-  border: 1px red dashed;
   min-height: calc(100vh - 96px);
   display: flex;
   justify-content: center;
+  background-image: linear-gradient(transparent 25%, #080908), url(/assets/images/background.jpg);
+  background-size: cover;
+  background-position: unset;
 }
 
 #intro div {
@@ -81,7 +86,9 @@ h2 {
 
 #intro h1 {
   text-align: center;
-  font-size: 15vw;
+  font-size: 11.5vw;
+  filter: drop-shadow(0 0 50px #E6E8e6);
+  text-transform: uppercase;
 }
 
 #intro h2 {
@@ -90,14 +97,7 @@ h2 {
   letter-spacing: 0.45vw;
   margin-top: 0;
   font-size: 2.5vw;
-}
-
-.shadow-box {
-  box-shadow: 5px 5px #3772FF, 10px 10px #DF2935, 15px 15px #FDCA40;
-}
-
-.shadow-text {
-  text-shadow: 5px 5px #3772FF, 10px 10px #DF2935, 15px 15px #FDCA40;
+  filter: blur(1px);
 }
 
 #about-me img {

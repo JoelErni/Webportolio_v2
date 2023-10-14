@@ -24,11 +24,14 @@ body{
 }
 
 section{
-    max-width: 75em;
     margin: auto;
     display: block;
     padding: 2.5em;
     margin: 2.5em auto;
+}
+
+section:not(section:first-of-type){
+    width: calc(100vw/3*2);
 }
 
 section:first-of-type{
@@ -68,17 +71,18 @@ h2{
     background-color: $c2;
     border: none;
     margin: 0;
-    max-width: 56vw;
+    max-width: 58vw;
     margin: auto;
 }
 
 #intro{
-    border: 1px red dashed;
-
     min-height: calc(100vh - 96px);
     display: flex;
     justify-content: center;
-    
+
+    background-image: linear-gradient(transparent 25%, $c1), url(/assets/images/background.jpg);
+    background-size: cover;
+    background-position: unset;
 }
 
 #intro div{
@@ -93,7 +97,9 @@ h2{
 
 #intro h1{
     text-align: center;
-    font-size: 15vw;
+    font-size: 11.5vw;
+    filter: drop-shadow(0 0 50px $c2);
+    text-transform: uppercase;
 }
 
 #intro h2{
@@ -102,26 +108,8 @@ h2{
     letter-spacing: 0.45vw;
     margin-top: 0;
     font-size: 2.5vw;
+    filter: blur(1px);
 }
-
-.shadow-box{
-    $shadow-box-offset: 5px;
-    box-shadow: 
-        $shadow-box-offset $shadow-box-offset $c3,
-        $shadow-box-offset*2 $shadow-box-offset*2 $c4,
-        $shadow-box-offset*3 $shadow-box-offset*3 $c5 
-    ;
-}
-
-.shadow-text{
-    $shadow-text-offset: 5px;
-    text-shadow: 
-        $shadow-text-offset $shadow-text-offset $c3,
-        $shadow-text-offset*2 $shadow-text-offset*2 $c4,
-        $shadow-text-offset*3 $shadow-text-offset*3 $c5 
-    ;
-}
-
 
 //about me
 #about-me img{
