@@ -1,8 +1,8 @@
 $c1: #080908;
 $c2: #E6E8e6;
-$c3: #3772FF;
-$c4: #DF2935;
-$c5: #FDCA40;
+$c3: #ffc400;
+$c4: #c9001b;
+$c5: #3290e7;
 
 @font-face {
     font-family: fonty;
@@ -14,7 +14,7 @@ html{
     color: $c2;
     padding: 0.5em;
     padding-bottom: 0;
-    animation:infinite forwards t 1s;
+    background-color: $c2;
 }
 
 body{
@@ -76,41 +76,83 @@ h2{
 }
 
 #intro{
-    min-height: calc(100vh - 96px);
+    min-height: calc(100vh - 5.5em);
     display: flex;
     justify-content: center;
 
-    background: scroll linear-gradient(transparent 25%, $c1), url(/assets/images/background.jpg) fixed;
-    background-size: cover;
-
+    background-color: $c3;
 }
+
 
 #title_container{
     transform-origin: center;
+    filter: drop-shadow(0 0 5px $c1);
 }
 
-#intro div{
+#title_container div{
+    height: 0.5em;
+    width: 100%;
+    background-color: $c2;
+}
+
+#intro > div{
     margin-top: 10em;
 }
 
 #intro h1{
     text-align: center;
-    font-size: 15vw;
-    filter: drop-shadow(0 0 50px $c2);
+    font-size: 19.5em;
 }
 
 #intro h2{
     text-align: center;
-    opacity: 0.75;
     letter-spacing: 0.45vw;
     margin-top: 0;
     font-size: 2.5vw;
-    filter: blur(1px);
+}
+
+#intro_arrow{
+    fill: $c2;
+    width: 2.5em;
+    
+    position: absolute;
+    bottom: 0;
+    animation: arrow_bounce 2s infinite cubic-bezier(0,1,0,1);
+}
+
+@keyframes arrow_bounce {
+    0%{
+        transform: translateY(0px)
+    }
+
+    50%{
+        transform: translateY(-10px)
+    }
+
+    100%{
+        transform: translateY(0px)
+    }
 }
 
 //about me
 #about-me img{
     background-color: $c2;
+}
+
+.about-me-container{
+    display: grid;
+    gap: 2em;
+    padding: 2em;
+    padding-top: 0;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.about-me-item h3{
+    margin: 0;
+}
+
+.about-me-item p{
+    margin: 0;
 }
 
 //übersicht
