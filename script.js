@@ -10,27 +10,27 @@ function intro_animation(){
 
 addEventListener("mousemove", (event) => {});
 
+const shadow_color = '#080908'
+const screen_width = screen.availWidth;
+const screen_height = screen.availHeight;
+const rotation_sensitivity = 50;
+const shadow_offset = 50;
+const title_elements = [
+    ['title_name', 1],
+    ['title_underline', 0.4],
+    ['title_desc', 0.2],
+    ['intro_arrow', 0.1]
+]
 onmousemove = (event) => {
-    var mousePos = { x: event.clientX, y: event.clientY };
-    const screen_width = screen.availWidth;
-    const screen_height = screen.availHeight;
-    
-    var rotation_sensitivity = 25;
-    var shadow_offset = 50;
+    for(i = 0; i < title_elements.length; i++){
+        var element = document.getElementById(title_elements[i][0]);
+        var mousePos = { x: event.clientX, y: event.clientY };
+        var x = (mousePos.y - screen_height / 2) / screen_height;
+        var y = (mousePos.x - screen_width / 2) / screen_width;
 
-    var x = (mousePos.y - (screen_height / 2)) / screen_height;
-    var y = (mousePos.x - (screen_width / 2)) / screen_width;
-
-    document.getElementById("title_container").style.transform = `rotateX(${x * rotation_sensitivity}deg) rotateY(${-y * rotation_sensitivity}deg)`
-
-    document.getElementById("title_name").style.textShadow = `${-y * shadow_offset}px ${-x * shadow_offset}px #080908`
-    document.getElementById("title_underline").style.boxShadow = `${-y * shadow_offset / 2.5}px ${-x * shadow_offset  / 2.5}px #080908`
-    document.getElementById("title_desc").style.textShadow = `${-y * shadow_offset / 5}px ${-x * shadow_offset / 5}px #080908`
-
-    document.getElementById("intro_arrow").style.filter = `drop-shadow(${-y * shadow_offset / 10}px ${-x * shadow_offset / 10}px #080908)`
-
-
-    console.log(x_rotation, y_rotation)
+        element.style.transform = `rotateX(${x * rotation_sensitivity}deg) rotateY(${-y * rotation_sensitivity}deg)`;
+        element.style.filter = `drop-shadow(${-y * shadow_offset * title_elements[i][1]}px ${-x * shadow_offset * title_elements[i][1]}px ${shadow_color})`
+    }
 };
 
 

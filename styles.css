@@ -16,6 +16,13 @@ body {
   background-color: #080908;
 }
 
+main > hr {
+  border-color: #ffc400;
+  border-width: 2px;
+  border-style: solid;
+  max-width: 75%;
+}
+
 section {
   margin: auto;
   display: block;
@@ -71,6 +78,10 @@ h2 {
   display: flex;
   justify-content: center;
   background-color: #ffc400;
+}
+
+#intro * {
+  transform-origin: center;
 }
 
 #title_container {

@@ -23,6 +23,13 @@ body{
     background-color: $c1;
 }
 
+main > hr{
+    border-color: $c3;
+    border-width: 2px;
+    border-style: solid;
+    max-width: 75%;
+}
+
 section{
     margin: auto;
     display: block;
@@ -83,6 +90,9 @@ h2{
     background-color: $c3;
 }
 
+#intro *{
+    transform-origin: center;
+}
 
 #title_container{
     transform-origin: center;
