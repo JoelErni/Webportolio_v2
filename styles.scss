@@ -144,6 +144,55 @@ h2{
     }
 }
 
+//overview
+
+#overview h1{
+    text-align: center;
+    font-size: 5em;
+}
+
+#overview img{
+    background-color: $c3;
+}
+
+#overview{
+    margin-top: 7.5em;
+    display: flex;
+    align-items: center;
+}
+
+#overview h1{
+    flex: 3;
+}
+
+#overview img{
+    flex: 1;
+}
+
+//languages
+#projects-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 2em;
+    gap: 1.5em;
+}
+
+.project-item{
+    padding: 1em;
+    background-color: #ffc400;
+    color: $c1;
+    transition: 0.25s;
+    transform: scale(0.9);
+}
+
+.project-item:hover{
+    transform: scale(1);
+}
+
+.project-item img{
+    width: 100%;
+}
+
 //about me
 #about-me img{
     background-color: $c2;
@@ -165,7 +214,7 @@ h2{
     margin: 0;
 }
 
-//übersicht
+//modules
 .module-name{
     font-weight: bold;
 }
