@@ -76,27 +76,20 @@ h2 {
 #intro {
   min-height: calc(100vh - 5.5em);
   display: flex;
-  justify-content: center;
+  align-items: center;
   background-color: #ffc400;
-}
-
-#intro * {
-  transform-origin: center;
 }
 
 #title_container {
   transform-origin: center;
   filter: drop-shadow(0 0 5px #080908);
+  flex: 1;
 }
 
 #title_container div {
   height: 0.5em;
   width: 100%;
   background-color: #E6E8e6;
-}
-
-#intro > div {
-  margin-top: 10em;
 }
 
 #intro h1 {
@@ -199,7 +192,7 @@ h2 {
 }
 
 @media screen and (max-width: 1000px) {
-  * {
+  *:not(#intro) {
     display: block !important;
   }
   h1 {

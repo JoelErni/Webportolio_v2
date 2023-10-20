@@ -85,28 +85,23 @@ h2{
 #intro{
     min-height: calc(100vh - 5.5em);
     display: flex;
-    justify-content: center;
+    align-items: center;
+
 
     background-color: $c3;
-}
-
-#intro *{
-    transform-origin: center;
 }
 
 #title_container{
     transform-origin: center;
     filter: drop-shadow(0 0 5px $c1);
+    
+    flex: 1;
 }
 
 #title_container div{
     height: 0.5em;
     width: 100%;
     background-color: $c2;
-}
-
-#intro > div{
-    margin-top: 10em;
 }
 
 #intro h1{
@@ -219,7 +214,7 @@ h2{
 }
 
 @media screen and (max-width: 1000px) {
-    *{
+    *:not(#intro){
         display: block !important;
     }
     
