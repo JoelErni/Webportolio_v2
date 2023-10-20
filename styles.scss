@@ -111,7 +111,7 @@ h2{
 
 #intro h1{
     text-align: center;
-    font-size: 19.5em;
+    font-size: 19.5vw;
 }
 
 #intro h2{
@@ -148,21 +148,20 @@ h2{
 
 #overview h1{
     text-align: center;
-    font-size: 5em;
+    font-size: 5em;    
+    flex: 3;
+
 }
 
 #overview img{
     background-color: $c3;
+    margin: auto;
 }
 
 #overview{
     margin-top: 7.5em;
     display: flex;
     align-items: center;
-}
-
-#overview h1{
-    flex: 3;
 }
 
 #overview img{
@@ -217,4 +216,49 @@ h2{
 //modules
 .module-name{
     font-weight: bold;
+}
+
+@media screen and (max-width: 1000px) {
+    *{
+        display: block !important;
+    }
+    
+    h1{
+        font-size: 7.5em;
+        text-align: center ;
+    }
+
+    h2{
+        font-size: 5em;
+    }
+
+    h3{
+        font-size: 3em;
+    }
+
+    p{
+        font-size: 2em;
+    }
+
+    .about-me-item{
+        margin-bottom: 1em;
+    }
+
+    .module-name{
+        font-size: 1.5em;
+    }
+
+    section{
+        margin: 0;
+        width: auto !important;
+        padding: 2.5em !important;
+    }
+
+    main > hr{
+        border-color: $c3;
+        border-width: 2px;
+        border-style: solid;
+        max-width: calc(100% - 10vw);
+    }
+    
 }
