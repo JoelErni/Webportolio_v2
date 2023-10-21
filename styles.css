@@ -144,6 +144,7 @@ h2 {
 
 #overview img {
   flex: 1;
+  filter: drop-shadow(1em 1em #E6E8e6);
 }
 
 #projects-container {
@@ -159,10 +160,12 @@ h2 {
   color: #080908;
   transition: 0.25s;
   transform: scale(0.9);
+  filter: drop-shadow(0.5em 0.5em 0px #E6E8e6);
 }
 
 .project-item:hover {
   transform: scale(1.05);
+  filter: drop-shadow(1em 1em 0px #E6E8e6);
 }
 
 .project-item img {

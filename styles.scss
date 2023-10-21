@@ -163,6 +163,7 @@ h2{
 
 #overview img{
     flex: 1;
+    filter: drop-shadow(1em 1em $c2);
 }
 
 //projects
@@ -175,14 +176,16 @@ h2{
 
 .project-item{
     padding: 1em;
-    background-color: #ffc400;
+    background-color: $c3;
     color: $c1;
     transition: 0.25s;
     transform: scale(0.9);
+    filter: drop-shadow(0.5em 0.5em 0px $c2);
 }
 
 .project-item:hover{
     transform: scale(1.05);
+    filter: drop-shadow(1em 1em 0px $c2);
 }
 
 .project-item img{

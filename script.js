@@ -1,4 +1,7 @@
-window.addEventListener("scroll", scroll);
+window.addEventListener("scroll", ()=>{
+    scroll();
+    reveal()
+});
 
 function scroll() {
     intro_animation()
@@ -40,16 +43,15 @@ onmousemove = (event) => {
 
 function reveal() {
     var reveals = document.querySelectorAll(".reveal");
-    
-        for (var i = 0; i < reveals.length; i++) {
-            var windowHeight = window.innerHeight;
-            var elementTop = reveals[i].getBoundingClientRect().top;
-            var elementVisible = 150;
-    
-            if (elementTop < windowHeight - elementVisible) {
-            reveals[i].classList.add("show");
-            } else if(elementTop > windowHeight) {
-            reveals[i].classList.remove("show");
-            }
+    for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("show");
+        } else if(elementTop > windowHeight) {
+        reveals[i].classList.remove("show");
         }
     }
+}
