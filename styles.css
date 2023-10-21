@@ -55,7 +55,7 @@ h2 {
   display: flex;
 }
 
-.flex-item {
+.flex-container > div {
   flex: var(--i);
 }
 
@@ -109,6 +109,8 @@ h2 {
   width: 2.5em;
   position: absolute;
   bottom: 0;
+  right: 50%;
+  left: 50%;
   animation: arrow_bounce 2s infinite cubic-bezier(0, 1, 0, 1);
 }
 
@@ -160,11 +162,19 @@ h2 {
 }
 
 .project-item:hover {
-  transform: scale(1);
+  transform: scale(1.05);
 }
 
 .project-item img {
   width: 100%;
+  transform: scale(0.95);
+  transition: 0.25s;
+  filter: blur(0.1em) drop-shadow(0 0 0em #080908);
+}
+
+.project-item:hover img {
+  transform: scale(1.05);
+  filter: blur(0em) drop-shadow(0 0 1em #080908);
 }
 
 #about-me img {
@@ -187,8 +197,22 @@ h2 {
   margin: 0;
 }
 
+#about-me a {
+  color: #E6E8e6;
+}
+
 .module-name {
   font-weight: bold;
+}
+
+footer {
+  color: #080908;
+  text-align: center;
+  background-color: #ffc400;
+}
+
+footer a {
+  color: #080908;
 }
 
 @media screen and (max-width: 1000px) {
