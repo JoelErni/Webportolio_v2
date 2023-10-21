@@ -55,3 +55,12 @@ function reveal() {
         }
     }
 }
+
+function showPage(){
+    document.getElementById('loading_screen').style.animation = "hide_loading_screen 1s ease forwards"
+    document.querySelector("body").style.filter = 'blur(0)'
+}
+
+window.addEventListener("load", function () {
+    showPage();
+});
