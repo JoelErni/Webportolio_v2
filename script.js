@@ -8,7 +8,10 @@ function scroll() {
 }
 
 function intro_animation(){
-    document.getElementById("intro").style.filter = `blur(${window.scrollY/25}px)`
+    var scroll_posY = window.scrollY
+    var blur_value = scroll_posY
+
+    document.getElementById("intro_container").style.filter = `blur(${(blur_value - screen_height / 4)/25}px)`
 }
 
 addEventListener("mousemove", (event) => {});

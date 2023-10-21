@@ -40,6 +40,7 @@ section:not(section:first-of-type) {
 
 section:first-of-type {
   margin-top: 0;
+  padding: 0;
 }
 
 section:last-of-type {
@@ -68,25 +69,33 @@ h2 {
   text-align: center;
 }
 
-#intro hr {
+#intro {
+  border-bottom: 8px solid #E6E8e6;
+  z-index: 0;
+  background-color: #ffc400;
+  height: calc(100vh - 1em);
+}
+
+#title_underline {
   min-height: 0.75vw;
   background-color: #E6E8e6;
   border: none;
   margin: 0;
-  max-width: 58vw;
+  max-width: 75vw;
   margin: auto;
 }
 
-#intro {
-  min-height: calc(100vh - 5.5em);
+#intro_container {
+  min-height: calc(100vh - 1em);
   display: flex;
   align-items: center;
-  background-color: #ffc400;
+  z-index: 99;
 }
 
 #title_container {
   transform-origin: center;
   filter: drop-shadow(0 0 5px #080908);
+  margin-bottom: 7.5em;
   flex: 1;
 }
 
@@ -96,14 +105,15 @@ h2 {
   background-color: #E6E8e6;
 }
 
-#intro h1 {
+#intro_container h1 {
   text-align: center;
   font-size: 19.5vw;
+  margin-bottom: -0.2em;
 }
 
-#intro h2 {
+#intro_container h2 {
   text-align: center;
-  letter-spacing: 0.45vw;
+  letter-spacing: 0.95vw;
   margin-top: 0;
   font-size: 2.5vw;
 }
@@ -111,9 +121,8 @@ h2 {
 #intro_arrow {
   fill: #E6E8e6;
   width: 2.5em;
-  position: absolute;
-  bottom: 0;
-  right: 50%;
+  position: relative;
+  bottom: 3vw;
   left: 50%;
   animation: arrow_bounce 2s infinite cubic-bezier(0, 1, 0, 1);
 }
@@ -267,7 +276,7 @@ footer a {
   }
 }
 @media screen and (max-width: 1000px) {
-  *:not(#intro) {
+  *:not(#intro_container) {
     display: block !important;
   }
   h1 {
